@@ -1,0 +1,37 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    /* Default font size of browser is 16px convert to percentage. */
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is.
+    font-size: 62.5%;
+    // MEDIA QUERY
+    @include respond(tab-land) {
+        //width < 1200
+        font-size: 56.25%; //1rem = 9px. 9/16 = 56.25%
+    }
+    // MEDIA QUERY
+    @include respond(tab-port) {
+        //width < 900
+        font-size: 50%; //1rem = 8px. 8/16 = 50%
+    }
+    // MEDIA QUERY
+    @include respond(big-desktop) {
+        font-size: 80%; //1rem = 12px. 12/16 = 75%
+    }
+}
+
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+    // MEDIA QUERY
+    @include respond(tab-port) {
+        //width < 900
+        padding: 0; //1rem = 8px. 8/16 = 50%
+    }
+}

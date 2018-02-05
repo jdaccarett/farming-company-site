@@ -1,0 +1,35 @@
+.header {
+    overflow: hidden;
+    height: 95vh;
+    position: relative;
+    background-color: $color-grey-light-1;
+    text-align: center;
+
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.7),
+        rgba($color-primary-dark, 0.7)),
+    url(../img/snow_1.jpg);
+    background-size: cover;
+    background-position: top;
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+        @include respond(desktop) {
+            display: none;
+        }
+    }
+    &__logo {
+        height: 6.5rem;
+    }
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
